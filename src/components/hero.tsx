@@ -61,7 +61,7 @@ export default function Hero() {
             </div>
           </motion.div>
           <div className="hidden md:block">
-            <ImagePage className="relative mt-8 md:mt-0 md:-mr-6 lg:-mr-12 px-10 py-20"/>   
+            <ImagePage className="relative mt-8 md:mt-0 md:-mr-6 lg:-mr-12 px-10 py-20" imgSrc="./hero.webp" alt="Confident woman smiling, representing inner healing and transformation"/>   
           </div>
         </div>
       </div>

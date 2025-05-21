@@ -21,11 +21,8 @@ const socials = [
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-[#002D5B] text-white">
-      {/* Top accent stripe */}
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#EC5B53] to-[#CF332B]" />
-
-      <div className="container px-4 py-16">
+    <footer className="relative bg-[#002D5B] text-white rounded-t-[2rem] w-full mx-auto">
+      <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid gap-12 md:grid-cols-12">
           {/* Brand column */}
           <div className="space-y-4 md:col-span-4">
@@ -51,7 +48,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Navigation */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 mx-auto">
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-300">Navigation</h4>
             <nav className="flex flex-col gap-3">
               {navas.map((a) => (

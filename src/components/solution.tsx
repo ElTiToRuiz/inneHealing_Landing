@@ -99,7 +99,7 @@ export default function Solution() {
 
           {/* Right side */}
           <div>
-            <ImagePage />
+            <ImagePage imgSrc="isabella.webp"/>
           </div>
 
         </div>

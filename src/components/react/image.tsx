@@ -17,11 +17,13 @@ export const ImagePage = ({imgSrc, width, height, alt, className}:ImageProps) =>
 >
   <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-300 hover:-translate-y-2">
     <img
-      src="/"
-      width={300}
-      height={400}
-      alt="Confident woman smiling, representing inner healing and transformation"
-      className="w-full max-h-[500px] object-cover bg-red-500"
+      src={imgSrc}
+      width={width}
+      height={height}
+      alt={alt}
+      className="w-full max-h-[700px] object-cover"
+      loading="lazy"
+      decoding="async"
     />
   </div>
 </motion.div>
