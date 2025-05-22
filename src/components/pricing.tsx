@@ -104,7 +104,7 @@ export default function PricingCard() {
               <CardFooter className="flex justify-center pb-10 pt-2">
                 <Button
                   size="lg"
-                  className="relative w-full max-w-xs overflow-hidden rounded-xl bg-gradient-to-r from-[#3C50E0] to-[#4A5DE0] text-white transition-all hover:shadow-lg hover:shadow-[#3C50E0]/20"
+                  className="relative w-full max-w-xs overflow-hidden rounded-xl bg-gradient-to-r from-[#3C50E0] to-[#4A5DE0] text-white transition-all hover:shadow-lg hover:shadow-[#3C50E0]/70"
                 >
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-[#3C50E0]/0 via-white/20 to-[#3C50E0]/0"
