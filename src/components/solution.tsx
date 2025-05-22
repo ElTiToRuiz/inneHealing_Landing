@@ -2,7 +2,7 @@ import { Check, Sparkles } from "lucide-react";
 import { ButtonPage } from "./react/button";
 import { BadgePage } from "./react/badge";
 import { ImagePage } from "./react/image";
-import { Separator } from "./ui/separator";
+import { SeparatorPage } from "./react/separator";
 
 const safeSpaceItems = [
   "Identify the subconscious beliefs keeping you stuck",
@@ -37,8 +37,11 @@ const receiveItems = [
 export default function Solution() {
   return (
     <>
-    <section className="max-w-4xl mx-auto">
-      <div className="z-10 flex w-full justify-center px-4">
+    <section className="relative bg-gradient-to-b from-white via-[#EC5B53]/20 to-[#fff]" id="solution">
+      <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#EC5B53]/20 blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-[#EC5B53]/30 blur-3xl"></div>
+      <div className="absolute top-40 right-10 w-40 h-40 rounded-full bg-[#EC5B53]/30 blur-3xl"></div>
+      <div className="z-10 flex w-full justify-center px-8 md:px-0 md:max-w-2xl lg:max-w-6xl mx-auto ">
         <div className="mx-auto w-full max-w-4xl rounded-3xl bg-white/90 p-10 shadow-2xl ring-1 ring-inset ring-[#F4EAEA] backdrop-blur-md text-center relative">
           <h2 className="mb-4 text-4xl font-bold leading-tight text-[#002D5B] md:text-6xl">
             Introducing The Inner Healing Code™
@@ -74,42 +77,46 @@ export default function Solution() {
         </div>
       </div>
     </section>
-    <Separator className="my-10 max-w-6xl mx-auto"/>
-    <section className="max-w-6xl min-w-4xl mx-auto">
-      <div className="mt-24 px-4 ">
-        <BadgePage text="What you get"/>  
+    <SeparatorPage/>
+    <section id="services" className="px-8 md:px-0 md:max-w-2xl lg:max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        <BadgePage text="What you get" />
+
         <h2 className="my-6 text-3xl font-bold text-[#002D5B] md:text-4xl">
           What You'll Receive
         </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left side */}
-          <div className="grid gap-6 md:gap-8 justify-start">
+
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Left */}
+          <ul className="space-y-8">
             {receiveItems.map(({ title, subtitle }) => (
-              <div key={title} className="flex items-center gap-4 text-left">
-                <div className="mt-1 flex-shrink-0">
-                  <Sparkles className="h-6 w-6 text-[#EC5B53]" />
-                </div>
+              <li key={title} className="flex items-start gap-4">
+                <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-[#EC5B53]" />
                 <div>
-                  <h3 className="text-xl font-semibold text-[#002D5B]">{title}</h3>
+                  <h3 className="text-lg font-semibold text-[#002D5B] sm:text-xl">
+                    {title}
+                  </h3>
                   <p className="text-[#555A5E]">{subtitle}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          {/* Right side */}
-          <div>
-            <ImagePage imgSrc="isabella.webp"/>
+          {/* Right */}
+          <div className="mx-auto md:mx-0 md:text-right">
+            <ImagePage
+              imgSrc="isabella.webp"
+              className="w-full max-w-xs rounded-2xl shadow-lg md:max-w-none"
+            />
           </div>
-
         </div>
 
-        <div className="my-12 flex justify-center">
-          <ButtonPage text="Transform Your Life Today"/>
+        <div className="mt-12 flex justify-start md:justify-center">
+          <ButtonPage text="Transform Your Life Today" />
         </div>
-      </div>    
+      </div>
     </section>
-    <Separator className="my-10 max-w-6xl mx-auto"/>
+    <SeparatorPage/>
     </>
   );
 }

@@ -1,8 +1,8 @@
 
 import { ExternalLink, Facebook, Instagram, Linkedin, Mail, } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input"
+import { SeparatorPage } from "./react/separator"
 
 const navas = [
   { label: "Home", href: "#" },
@@ -21,7 +21,7 @@ const socials = [
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-[#002D5B] text-white rounded-t-[2rem] w-full mx-auto">
+    <footer className="relative bg-[#002D5B] text-white md:rounded-t-[2rem] w-full mx-auto">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid gap-12 md:grid-cols-12">
           {/* Brand column */}
@@ -48,9 +48,9 @@ export default function SiteFooter() {
           </div>
 
           {/* Navigation */}
-          <div className="md:col-span-4 mx-auto">
+          <div className="md:col-span-4 md:mx-auto">
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-300">Navigation</h4>
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flew-row gap-1 md:flex-col md:gap-3 ">
               {navas.map((a) => (
                 <a
                   key={a.label}
@@ -95,7 +95,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <Separator className="my-8 bg-slate-700" />
+        <SeparatorPage className="my-8 bg-slate-700" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
           <p className="text-xs text-slate-400">

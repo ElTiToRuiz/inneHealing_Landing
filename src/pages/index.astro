@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layout/BaseLayout.astro"
+import Navbar from "../components/navbar"
 import Hero from "../components/hero"
 import ProblemSection from "../components/problems"
 import Solution from "../components/solution"
@@ -9,6 +10,7 @@ import FAQSection from "../components/faq"
 import SiteFooter from "../components/footer"
 ---
 <BaseLayout>
+	<Navbar client:idle/>
 	<Hero client:idle/>
 	<ProblemSection client:idle/>
 	<Solution client:idle/>

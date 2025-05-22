@@ -33,40 +33,38 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="pb-20">
-        <div className="mx-auto max-w-4xl">
-          <Card className="border-none shadow-none m-0 p-0">
-            <BadgePage text="FAQ" />
-            <CardHeader className="text-start p-0 my-6">
-              <CardTitle className="text-3xl font-bold text-[#002D5B] md:text-5xl">
-                Frequently Asked Questions
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-[#F4EAEA]">
-                    <AccordionTrigger className="text-left text-base font-medium text-[#002D5B] hover:text-[#EC5B53] hover:no-underline md:text-lg">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-[#555A5E]">
-                      <p className="pt-2">{faq.answer}</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+    <section className="mx-auto pb-20 px-8 md:px-0 md:max-w-2xl lg:max-w-6xl" id="faq">
+      <Card className="border-none shadow-none m-0 p-0">
+        <BadgePage text="FAQ" />
+        <CardHeader className="text-start p-0 my-6">
+          <CardTitle className="text-3xl font-bold text-[#002D5B] md:text-5xl">
+            Frequently Asked Questions
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-[#F4EAEA]">
+                <AccordionTrigger className="text-left text-base font-medium text-[#002D5B] hover:text-[#EC5B53] hover:no-underline md:text-lg">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-[#555A5E]">
+                  <p className="pt-2">{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
 
-              <div className="mt-8 rounded-lg p-4 text-center">
-                <p className="text-sm text-[#555A5E]">
-                  Still have questions? Contact us at{" "}
-                  <a href="mailto:support@innerhealing.com" className="font-medium text-[#EC5B53] hover:underline">
-                    support@innerhealing.com
-                  </a>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+          <div className="mt-8 rounded-lg p-4 text-center">
+            <p className="text-sm text-[#555A5E]">
+              Still have questions? Contact us at{" "}
+              <a href="mailto:support@innerhealing.com" className="font-medium text-[#EC5B53] hover:underline">
+                support@innerhealing.com
+              </a>
+            </p>
+          </div>
+        </CardContent>
+      </Card>
     </section>
   )
 }

@@ -4,7 +4,7 @@ import { Check, ShieldCheck, Sparkles, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "./ui/separator"
+import { SeparatorPage } from "./react/separator"
 
 export default function PricingCard() {
   const features = [
@@ -18,7 +18,12 @@ export default function PricingCard() {
 
   return (
     <section>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative py-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-[#EC5B53]/20 to-[#fff]">
+          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#EC5B53]/20 blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-[#EC5B53]/30 blur-3xl"></div>
+          <div className="absolute top-40 right-10 w-40 h-40 rounded-full bg-[#EC5B53]/30 blur-3xl"></div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +125,7 @@ export default function PricingCard() {
           </div>
         </motion.div>
       </div>
-      <Separator className="my-10 lg:my-16 max-w-6xl mx-auto" />
+      <SeparatorPage />
     </section>
   )
 }

@@ -6,7 +6,7 @@ import { Star } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { BadgePage } from "./react/badge"
-import { Separator } from "./ui/separator"
+import { SeparatorPage } from "./react/separator"
 
 interface Review {
   name: string
@@ -68,7 +68,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden max-w-4xl mx-auto">
+    <section className="relative px-8 md:px-0 md:max-w-2xl lg:max-w-6xl mx-auto" id="testimonials">
 
       <div className="mx-auto px-4">
         <BadgePage text="Recent History"/>
@@ -80,7 +80,7 @@ export default function Testimonials() {
         {/* Testimonial carousel */}
         <div className="relative mx-auto max-w-2xl">
           {/* Testimonial cards */}
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden h-fit py-10 px-2">
             <AnimatePresence initial={false} mode="wait">
               <motion.div
                 key={index}
@@ -153,7 +153,7 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-      <Separator className="my-10 lg:my-16 max-w-6xl mx-auto" />
+      <SeparatorPage />
     </section>
   )
 }

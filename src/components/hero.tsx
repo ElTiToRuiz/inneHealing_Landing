@@ -28,7 +28,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative max-h-[100vh] lg:min-h-[100vh]">
+    <section className="relative min-h-[100vh] md:min-h-fit pt-16 md:pt-0" id="home">
       {/* Abstract shapes/particles background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#EC5B53]/50 via-white to-[#fff]">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#EC5B53]/10 blur-3xl"></div>
@@ -37,7 +37,7 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 bg-[url('/noise.jpg')] opacity-[0.1] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 py-10 h-full">
+      <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 py-5 h-full">
         <div className="grid md:grid-cols-2 lg:gap-12 justify-center items-center">
           <motion.div
             className="flex flex-col space-y-6 mx-auto"
@@ -60,7 +60,7 @@ export default function Hero() {
               <ButtonPage ctaRef={ctaRef} text="Book Your Discovery Call"/>
             </div>
           </motion.div>
-          <div className="hidden md:block">
+          <div>
             <ImagePage className="relative mt-8 md:mt-0 md:-mr-6 lg:-mr-12 px-10 py-20" imgSrc="./hero.webp" alt="Confident woman smiling, representing inner healing and transformation"/>   
           </div>
         </div>

@@ -1,16 +1,15 @@
 "use client"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { StageCard } from "./react/card"
 import { problemsText } from "@/text/problems"
-import { Separator } from "./ui/separator"
 import { BadgePage } from "./react/badge"
+import { SeparatorPage } from "./react/separator"
 
 
 export default function ProblemSection() {
   return (
-    <section className="py-24">
+    <section className="px-8 md:px-0 md:max-w-2xl lg:max-w-6xl mx-auto" id="problems">
       <div className="container mx-auto px-4 lg:max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left side - Sticky Content */}
@@ -44,14 +43,14 @@ export default function ProblemSection() {
             }
           </div>
         </div>
-        <div className="max-w-4xl mx-auto mt-20 py-20">
+        <div className="max-w-4xl mx-auto mt-20 lg:py-20">
           <h2 className="text-4xl md:text-5xl font-bold text-[#002D5B] leading-tight mb-6">
             It's not your fault. 
             <br/>You just haven’t gone deep enough.
           </h2>
         </div>
-      <Separator/>
       </div>
+      <SeparatorPage/>
     </section>
   )
 }
