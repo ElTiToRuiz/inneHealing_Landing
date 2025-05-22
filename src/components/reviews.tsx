@@ -110,21 +110,23 @@ export default function Testimonials() {
                       {reviews[index].text}
                     </blockquote>
 
-                    <div className="flex items-center gap-4 mt-6 pt-6 border-t border-slate-100">
+                    <div className="flex flex-row justify-start items-center gap-6 mt-6 pt-6 border-t border-slate-100">
                       <Avatar className="h-12 w-12 border border-rose-100">
                         <AvatarImage src={reviews[index].img || "/placeholder.svg"} alt={reviews[index].name} />
                         <AvatarFallback className="bg-rose-50 text-rose-600 font-medium">
                           {reviews[index].initials}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-slate-800">{reviews[index].name}</h3>
-                        <time className="text-sm text-slate-500">{reviews[index].date}</time>
-                      </div>
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-                        ))}
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-4 w-full">
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-slate-800">{reviews[index].name}</h3>
+                          <time className="text-sm text-slate-500">{reviews[index].date}</time>
+                        </div>
+                        <div className="flex gap-0.5">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

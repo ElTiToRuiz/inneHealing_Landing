@@ -5,6 +5,7 @@ import { StageCard } from "./react/card"
 import { problemsText } from "@/text/problems"
 import { BadgePage } from "./react/badge"
 import { SeparatorPage } from "./react/separator"
+import { ButtonPage } from "./react/button"
 
 
 export default function ProblemSection() {
@@ -30,9 +31,7 @@ export default function ProblemSection() {
                 {problemsText.description}
               </p>
 
-              <Button className="bg-[#CF332B] hover:bg-[#EC5B53] text-white px-8 py-6 rounded-md text-lg">
-                {problemsText.ctaText}
-              </Button>
+              <ButtonPage text="Start Your Healing Journey Now!"/>
             </motion.div>
           </div>
 

@@ -108,7 +108,7 @@ export default function Solution() {
           <div className="mx-auto md:mx-0 md:text-right">
             <ImagePage
               imgSrc="isabella.webp"
-              className="w-full max-w-xs rounded-2xl shadow-lg md:max-w-none"
+              width={320}
             />
           </div>
         </div>

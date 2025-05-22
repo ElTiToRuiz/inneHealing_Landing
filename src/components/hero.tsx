@@ -28,7 +28,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[100vh] md:min-h-fit pt-16 md:pt-0" id="home">
+    <section className="relative min-h-[100vh] pt-16 md:pt-10" id="home">
       {/* Abstract shapes/particles background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#EC5B53]/50 via-white to-[#fff]">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#EC5B53]/10 blur-3xl"></div>
@@ -57,7 +57,7 @@ export default function Hero() {
             </div>
 
             <div>
-              <ButtonPage ctaRef={ctaRef} text="Book Your Discovery Call"/>
+              <ButtonPage ctaRef={ctaRef} text="Claim Your Spot Today."/>
             </div>
           </motion.div>
           <div>

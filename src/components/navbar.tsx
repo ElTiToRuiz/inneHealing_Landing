@@ -134,7 +134,7 @@ export default function Navbar() {
         animate="animate"
         className={cn(
           "lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all",
-          shrink ? "h-12 bg-white/80" : "h-14 bg-transparent"
+          shrink ? "h-12 bg-white/80" : "h-14 bg-transparent border-none shadow-none"
         )}
       >
         <a onClick={()=>handleLinkClick("#")} className="font-semibold tracking-tight text-[#CF332B]">The Inner Healing</a>

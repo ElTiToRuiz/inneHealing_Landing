@@ -13,7 +13,6 @@ export const problemsText = {
   ctaText: "Book Your Discovery Call",
   problems:[ 
     {
-      stage: 1,
       icon: Frown,
       title: "Emotionally Drained",
       description:
@@ -22,7 +21,6 @@ export const problemsText = {
       delay: 0
     },
     {
-      stage: 2,
       icon: RefreshCcw,
       title: "Repeating Patterns",
       description:
@@ -31,7 +29,6 @@ export const problemsText = {
       delay: 0.1
     },
     {
-      stage: 3,
       icon: HelpCircle,
       title: "Nothing Seems to Work",
       description:
@@ -40,7 +37,6 @@ export const problemsText = {
       delay: 0.2
     },
     {
-      stage: 4,
       icon: AlertTriangle,
       title: "Stress & Self-Doubt",
       description:
