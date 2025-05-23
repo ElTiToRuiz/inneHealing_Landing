@@ -23,14 +23,14 @@ export const POST: APIRoute = async ({ redirect }) => {
 				price_data: {
 					currency: "usd",
 					product_data: {
-					name: "The Inner Healing Program",
+					name: "The Inner Shift Challenge",
 					},
 					unit_amount: amount * 100, 
 				},
 				quantity: 1,
 				},
 			],
-			success_url: "https://www.theinnershiftchallenge.com/",
+			success_url: "https://www.theinnershiftchallenge.com/thanks?session_id={CHECKOUT_SESSION_ID}",
 			cancel_url: "https://www.theinnershiftchallenge.com/",
 		});
 
