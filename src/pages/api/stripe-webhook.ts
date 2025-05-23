@@ -17,6 +17,7 @@ const supabase = createClient(
 )
 
 export const POST: APIRoute = async ({ request }) => {
+  console.log("🔔 Webhook received:", request.headers.get("stripe-signature"))
   const rawBody = await request.text()
   const sig = request.headers.get("stripe-signature")!
   const webhookSecret = import.meta.env.STRIPE_WEBHOOK_SECRET!
@@ -24,6 +25,7 @@ export const POST: APIRoute = async ({ request }) => {
   let event: Stripe.Event
 
   try {
+
     event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret)
   } catch (err) {
     console.error("❌ Webhook verification failed:", err)
@@ -47,6 +49,15 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response("Bad request", { status: 400 })
     }
 
+    console.log("✅ Stripe session:", {
+      email,
+      name,
+      amount,
+      currency,
+      status,
+      stripe_customer_id,
+      stripe_payment_intent,
+    })
     const { error } = await supabase.from("purchases").insert([
       {
         email,
