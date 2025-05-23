@@ -6,6 +6,26 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { SeparatorPage } from "./react/separator"
 
+
+async function handleBuy() {
+  const res = await fetch('/api/checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const data = await res.json()
+  console.log('Stripe URL:', data.url); // ✅ Debug
+  if (data?.url) {
+    window.location.href = data.url // 🔁 redirección real al checkout
+  } else {
+    alert('Something went wrong. Try again.')
+    console.error('Stripe checkout failed:', data)
+  }
+}
+
+
+
 export default function PricingCard() {
   const features = [
     "6‑Week RTT® + Coaching Program",
@@ -17,7 +37,7 @@ export default function PricingCard() {
   ]
 
   return (
-    <section>
+    <section id="pricing">
       <div className="container mx-auto px-4 relative py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-[#EC5B53]/20 to-[#fff]">
           <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#EC5B53]/20 blur-3xl"></div>
@@ -75,14 +95,14 @@ export default function PricingCard() {
                 </ul>
 
                 {/* Guarantee box */}
-                <div className="flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#F5F7FF] to-[#FAFBFF] p-5 shadow-sm">
+                {/* <div className="flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#F5F7FF] to-[#FAFBFF] p-5 shadow-sm">
                   <div className="rounded-full bg-white p-2 shadow-sm">
                     <ShieldCheck className="h-6 w-6 flex-shrink-0 text-[#3C50E0]" />
                   </div>
                   <p className="text-sm font-medium text-[#555A5E]">
                     14‑day money‑back guarantee if you don't feel a shift.
                   </p>
-                </div>
+                </div> */}
 
                 {/* Bonus section */}
                 <div className="rounded-2xl border border-[#E3E8FF] bg-[#F8FAFF] p-5 shadow-sm">
@@ -104,7 +124,8 @@ export default function PricingCard() {
               <CardFooter className="flex justify-center pb-10 pt-2">
                 <Button
                   size="lg"
-                  className="relative w-full max-w-xs overflow-hidden rounded-xl bg-gradient-to-r from-[#3C50E0] to-[#4A5DE0] text-white transition-all hover:shadow-lg hover:shadow-[#3C50E0]/70"
+                  className="relative cursor-pointer w-full max-w-xs overflow-hidden rounded-xl bg-gradient-to-r from-[#3C50E0] to-[#4A5DE0] text-white transition-all hover:shadow-lg hover:shadow-[#3C50E0]/70"
+                  onClick={handleBuy}
                 >
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-[#3C50E0]/0 via-white/20 to-[#3C50E0]/0"

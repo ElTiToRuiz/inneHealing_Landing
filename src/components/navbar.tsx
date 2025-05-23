@@ -6,15 +6,8 @@ import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { handleLinkClick } from "@/utils/handleClick"
+import { navas } from "./footer"
 
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Problems", href: "#problems" },
-  { label: "Solution", href: "#solution" },
-  { label: "Services", href: "#services" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#faq" },
-]
 
 export default function Navbar() {
   const [shrink, setShrink] = useState(false)
@@ -25,7 +18,7 @@ export default function Navbar() {
       setShrink(window.scrollY > 80)
 
       // set active section
-      for (const { href } of navItems) {
+      for (const { href } of navas) {
         const id = href.substring(1)
         const el = document.getElementById(id)
         if (!el) continue
@@ -81,7 +74,7 @@ export default function Navbar() {
 
         {/* nav-links */}
         <ul className="mx-8 flex flex-1 items-center justify-center gap-6 text-sm font-medium">
-          {navItems
+          {navas
             .filter((i) => i.label !== "Home")
             .map(({ label, href }) => {
               const isActive = active === href.substring(1)

@@ -1,0 +1,45 @@
+// src/pages/api/checkout.ts
+import type { APIRoute } from 'astro'
+import Stripe from 'stripe'
+
+// enable astro server-side rendering
+export const prerender = false
+
+const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2025-04-30.basil',
+})
+
+const AMOUNT = import.meta.env.AMOUNT
+const amount = parseInt(AMOUNT, 10) || 2000
+
+export const POST: APIRoute = async ({ redirect }) => {
+	try {
+		const session = await stripe.checkout.sessions.create({
+			mode: "payment",
+			payment_method_types: ["card"],
+			customer_creation: "always",
+			line_items: [
+				{
+				price_data: {
+					currency: "usd",
+					product_data: {
+					name: "The Inner Healing Program",
+					},
+					unit_amount: amount * 100, 
+				},
+				quantity: 1,
+				},
+			],
+			success_url: "https://www.theinnershiftchallenge.com/",
+			cancel_url: "https://www.theinnershiftchallenge.com/",
+		});
+
+		return new Response(JSON.stringify({ url: session.url }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+	} catch (err) {
+		console.error("🔥 Stripe error:", err);
+		return new Response("Error creating checkout session", { status: 500 });
+	}
+};

@@ -9,3 +9,15 @@ export const handleLinkClick = (href: string) => {
     })
   }
 }
+
+
+export const redirectPricing = () => {
+  const el = document.getElementById("pricing")
+  if (el instanceof HTMLElement) {
+    const offsetTop = el.offsetTop
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    })
+  }
+}

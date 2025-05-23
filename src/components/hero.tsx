@@ -5,6 +5,7 @@ import { Sparkles } from "lucide-react"
 import { ButtonPage } from "./react/button"
 import { BadgePage } from "./react/badge"
 import { ImagePage } from "./react/image"
+import { handleLinkClick } from "@/utils/handleClick"
 
 export default function Hero() {
   const ctaRef = useRef<HTMLButtonElement>(null)
@@ -57,7 +58,7 @@ export default function Hero() {
             </div>
 
             <div>
-              <ButtonPage ctaRef={ctaRef} text="Claim Your Spot Today."/>
+              <ButtonPage ctaRef={ctaRef} text="Claim Your Spot Today." />
             </div>
           </motion.div>
           <div>

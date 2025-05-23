@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { SeparatorPage } from "./react/separator"
 
-const navas = [
+export const navas = [
   { label: "Home", href: "#" },
-  { label: "Program", href: "#" },
-  { label: "Testimonials", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "About", href: "#problems" },
+  { label: "Program", href: "#services" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
 ]
 
 const socials = [
@@ -32,7 +32,7 @@ export default function SiteFooter() {
             </p>
 
             {/* Newsletter signup */}
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <p className="mb-2 text-sm font-medium text-white">Join our newsletter</p>
               <div className="flex gap-2">
                 <Input
@@ -44,7 +44,7 @@ export default function SiteFooter() {
                   Subscribe
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Navigation */}
