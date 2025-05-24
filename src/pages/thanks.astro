@@ -1,14 +1,5 @@
 ---
 import BaseLayout from "@/layout/BaseLayout.astro";
-
-(async () => {
-  const url = new URL(window.location.href)
-  const sessionId = url.searchParams.get("session_id")
-  if (sessionId) {
-    console.log("Stripe Session ID:", sessionId)
-    // Opcional: hacer fetch a tu backend o a Stripe para mostrar más datos
-  }
-})();
 ---
 <BaseLayout>
   <main class="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#FFF6F5] via-[#FFF1F0] to-white px-6">
