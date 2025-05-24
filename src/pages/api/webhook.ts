@@ -12,7 +12,7 @@ const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, {
 
 // Supabase client con service role
 const supabase = createClient(
-  import.meta.env.PUBLIC_SUPABASE_URL!,
+  import.meta.env.SUPABASE_URL!,
   import.meta.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
