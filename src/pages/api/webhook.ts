@@ -1,15 +1,6 @@
-import type { APIRoute } from "astro"
-
-export const prerender = false
-
-export const POST: APIRoute = async () => {
-  console.log("✅ Webhook ejecutado")
-  return new Response("OK", { status: 200 })
-}
 // // src/pages/api/webhook.ts
 // import type { APIRoute } from "astro"
 // import Stripe from "stripe"
-// import { createClient } from "@supabase/supabase-js"
 
 // export const prerender = false
 

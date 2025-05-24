@@ -1,13 +1,9 @@
 // src/pages/api/checkout.ts
+import { stripe } from '@/lib/stripe';
 import type { APIRoute } from 'astro'
-import Stripe from 'stripe'
 
 // enable astro server-side rendering
 export const prerender = false
-
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-04-30.basil',
-})
 
 const AMOUNT = import.meta.env.AMOUNT
 const amount = parseInt(AMOUNT, 10) || 2000
