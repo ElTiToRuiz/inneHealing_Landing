@@ -10,7 +10,7 @@ export default defineConfig({
   adapter: vercel({}),
   vite: {
     plugins: [tailwindcss()],
-    envPrefix: ['OPENAI_', 'VITE_'],
+    envPrefix: ['OPENAI_', 'VITE_', 'SUPABASE_', 'STRIPE_']
   },
   integrations: [react()],
 });
