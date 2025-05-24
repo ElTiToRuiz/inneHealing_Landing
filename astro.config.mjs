@@ -1,15 +1,15 @@
-// @ts-check
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 
-// https://astro.build/config
 export default defineConfig({
-  output: 'server',         // <---- Add this if missing
-  adapter: vercel({}),
+  output: 'server',
+  adapter: vercel(),
+  integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
+    // puedes eliminar envPrefix o ampliarlo si lo necesitas
   },
-  integrations: [react()],
 });
