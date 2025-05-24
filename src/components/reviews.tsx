@@ -19,30 +19,54 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "Anna Thompson",
-    date: "Jan 12, 2024",
+    name: "Anna ",
+    date: "Jan 12, 2025",
     img: "/avatar1.jpg",
     initials: "AT",
     text: "I made more progress in 6 weeks than in years of therapy. I finally feel calm and confident again!",
     tag: "Inner Healing Program",
   },
   {
-    name: "Maria Lopez",
-    date: "Feb 03, 2024",
+    name: "Maria",
+    date: "Feb 03, 2025",
     img: "/avatar2.jpg",
     initials: "ML",
-    text: "The Inner Healing Code™ helped me break toxic cycles I thought would haunt me forever.",
+    text: "The Inner Healing Code helped me break toxic cycles I thought would haunt me forever.",
     tag: "Transformation Journey",
   },
   {
-    name: "Sarah Kim",
-    date: "Mar 27, 2024",
+    name: "Sarah",
+    date: "Mar 27, 2025",
     img: "/avatar3.jpg",
     initials: "SK",
-    text: "The RTT® session was life‑changing, and the coaching kept me accountable every step of the way.",
-    tag: "RTT® Therapy",
+    text: "The RTT session was life‑changing, and the coaching kept me accountable every step of the way.",
+    tag: "RTT Therapy",
   },
-]
+  {
+    name: "Lina",
+    date: "Apr 15, 2025",
+    img: "/avatar4.jpg",   // or leave empty to fall back to initials
+    initials: "LD",
+    text: "For the first time in years I wake up without that heavy knot of anxiety in my chest.",
+    tag: "Anxiety Relief",
+  },
+  {
+    name: "Olivia",
+    date: "Mar 08, 2025",
+    img: "/avatar5.jpg",
+    initials: "OR",
+    text: "Week by week I felt layers of self-doubt peel away. Friends keep asking what I’ve done differently!",
+    tag: "Confidence Boost",
+  },
+  {
+    name: "Zoe",
+    date: "May 02, 2025",
+    img: "/avatar6.jpg",
+    initials: "ZH",
+    text: "The combination of RTT and coaching is pure magic—fast, gentle, and deeply empowering.",
+    tag: "Rapid Results",
+  }
+];
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0)

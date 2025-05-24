@@ -84,8 +84,8 @@ export default function SiteFooter() {
             <div className="space-y-2 text-sm text-slate-300">
               <p>
                 <span className="font-medium text-white">Email: </span>
-                <a href="mailto:hello@innerhealingcode.com" className="hover:text-[#EC5B53] hover:underline">
-                  hello@innerhealingcode.com
+                <a href="mailto:isabelle@pathwaytosuccess.be" className="hover:text-[#EC5B53] hover:underline">
+                   isabelle@pathwaytosuccess.be
                 </a>
               </p>
               <p>
@@ -99,17 +99,14 @@ export default function SiteFooter() {
 
         <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} The Inner Healing Code™. All rights reserved.
+            © {new Date().getFullYear()} The Inner Shift Challenge. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-slate-400">
-            <a href="#" className="hover:text-[#EC5B53] hover:underline">
+            <a href="/privacy" className="hover:text-[#EC5B53] hover:underline">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#EC5B53] hover:underline">
+            <a href="/terms" className="hover:text-[#EC5B53] hover:underline">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-[#EC5B53] hover:underline">
-              Cookie Policy
             </a>
           </div>
         </div>

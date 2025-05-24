@@ -26,9 +26,3 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-
-# not to upload yet
-cookie.astro
-privacy.astro
-terms.astro
-.env
