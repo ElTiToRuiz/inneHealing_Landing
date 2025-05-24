@@ -7,24 +7,27 @@ import { Badge } from "@/components/ui/badge"
 import { SeparatorPage } from "./react/separator"
 
 
-async function handleBuy() {
-  const res = await fetch('/api/checkout', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-  const data = await res.json()
-  console.log('Stripe URL:', data.url); // ✅ Debug
-  if (data?.url) {
-    window.location.href = data.url // 🔁 redirección real al checkout
-  } else {
-    alert('Something went wrong. Try again.')
-    console.error('Stripe checkout failed:', data)
-  }
+// async function handleBuy() {
+//   const res = await fetch('/api/checkout', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   })
+//   const data = await res.json()
+//   console.log('Stripe URL:', data.url); // ✅ Debug
+//   if (data?.url) {
+//     window.location.href = data.url // 🔁 redirección real al checkout
+//   } else {
+//     alert('Something went wrong. Try again.')
+//     console.error('Stripe checkout failed:', data)
+//   }
+// }
+
+
+const handleBuy = () => {
+  window.location.href = "https://buy.stripe.com/9B628sffM6rncqKgVK3oA01"; // Replace with your actual Stripe URL 
 }
-
-
 
 export default function PricingCard() {
   const features = [
