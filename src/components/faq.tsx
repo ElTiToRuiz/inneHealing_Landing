@@ -59,7 +59,7 @@ export default function FAQSection() {
             <p className="text-sm text-[#555A5E]">
               Still have questions? Contact us at{" "}
               <a href="mailto:support@innerhealing.com" className="font-medium text-[#EC5B53] hover:underline">
-                support@innerhealing.com
+                isabelle@pathwaytosuccess.be 
               </a>
             </p>
           </div>
