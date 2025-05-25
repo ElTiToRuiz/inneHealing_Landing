@@ -24,11 +24,6 @@ const faqs = [
     answer:
       "Yes. All RTT® and coaching sessions are hosted on Zoom, and resources are delivered digitally—so you can join from anywhere.",
   },
-  {
-    question: "What if I'm not satisfied?",
-    answer:
-      "We offer a 14‑day money‑back guarantee. If you don't feel a meaningful shift, just let us know and we'll refund you, no questions asked.",
-  },
 ]
 
 export default function FAQSection() {

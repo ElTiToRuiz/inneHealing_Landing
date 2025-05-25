@@ -52,7 +52,7 @@ export default function Solution() {
             </h3>
 
             <p className="mx-auto mb-12 max-w-2xl text-lg text-gray-600">
-              At the core of our program lies a commitment to helping women reclaim their joy, confidence, and clarity
+              At the core of our program lies a commitment to helping woman reclaim their joy, confidence, and clarity
               through powerful transformational techniques.
             </p>
 
