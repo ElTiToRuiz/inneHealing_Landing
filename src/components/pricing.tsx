@@ -26,7 +26,7 @@ import { SeparatorPage } from "./react/separator"
 
 
 const handleBuy = () => {
-  window.location.href = "https://buy.stripe.com/9B628sffM6rncqKgVK3oA01"; // Replace with your actual Stripe URL 
+  window.location.href = "https://buy.stripe.com/fZu7sM5FceXTbmG8pe3oA02"; // Replace with your actual Stripe URL 
 }
 
 export default function PricingCard() {
