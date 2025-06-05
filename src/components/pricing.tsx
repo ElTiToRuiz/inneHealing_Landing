@@ -77,7 +77,7 @@ export default function PricingCard() {
                 {/* Price section */}
                 <div className="flex flex-col items-center justify-center space-y-2">
                   <div className="relative">
-                    <span className="text-6xl font-extrabold text-[#3C50E0]">$2,000</span>
+                    <span className="text-6xl font-extrabold text-[#3C50E0]">2,000€</span>
                     <div className="absolute -right-12 -top-2">
                       <Badge className="bg-[#E3E8FF] text-[#3C50E0]">Save 20%</Badge>
                     </div>
